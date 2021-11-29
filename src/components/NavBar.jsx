@@ -11,9 +11,9 @@ const NavBar = () => {
                     <Link to='/' style={{textDecoration: "none", color: "white"}}><Logo>COD.ER $HO.P</Logo></Link>
                 </Left>
                 <Center>
-                    <Link to='/category/9' style={{textDecoration: "none", color: "white"}}><MenuItem>Sin Alcohol</MenuItem></Link>
-                    <Link to='/category/1' style={{textDecoration: "none", color: "white"}}><MenuItem>Vinos</MenuItem></Link>
-                    <Link to='/category/5' style={{textDecoration: "none", color: "white"}}><MenuItem>Licores</MenuItem></Link>                    
+                    <Link to='/category/MbCjgT1qxGT28TQHIDxs' style={{textDecoration: "none", color: "white"}}><MenuItem>Sin Alcohol</MenuItem></Link>
+                    <Link to='/category/WuwoOSINFxcXZiKm3R1x' style={{textDecoration: "none", color: "white"}}><MenuItem>Vinos</MenuItem></Link>
+                    <Link to='/category/i3pqaIGbQs2vvEuquCw5' style={{textDecoration: "none", color: "white"}}><MenuItem>Licores</MenuItem></Link>                    
                 </Center>
                 <Right>
                     <MenuItem>REGISTER</MenuItem>
