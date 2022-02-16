@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom';
 import { useContext, useEffect } from 'react';
 import { CartContext } from './CartContext';
 import { WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductAmountContainer, ProductAmount, ProductPrice, Hr } from './styledComponents';
-
+import {serverTimestamp} from 'firebase/firestore'
 import FormatNumber from "../utils/FormatNumber";
 import styled from "styled-components";
+import { createOrderInFirestore } from '../utils/firestoreFetch';
 
 const Top = styled.div`
   display: flex;
@@ -72,6 +73,29 @@ const Button = styled.button`
 const Cart = () => {
     const test = useContext(CartContext);
 
+    const createOrder = () => {
+      let order = {
+        buyer: {
+          name: 'Leo Messi',
+          phone: '123456789',
+          email: 'leo@messi.com'
+        },
+        items: test.cartList.map(item => ({
+          id: item.idItem,
+          price: item.costItem,
+          title: item.nameItem,
+          qty: item.qtyItem
+        })),
+        date: serverTimestamp(),
+        total: test.calcTotal()
+      }
+      createOrderInFirestore(order)
+        .then(result => alert('Tu orden ha sido creada con éxito. '))
+        .catch(error => console.log(error))
+
+      test.removeList();
+    }
+
     return (
         <WrapperCart>
             <TitleCart>YOUR CART</TitleCart>
@@ -131,7 +155,7 @@ const Cart = () => {
                                 <SummaryItemText>Total</SummaryItemText>
                                 <SummaryItemPrice><FormatNumber number={test.calcTotal()} /></SummaryItemPrice>
                             </SummaryItem>
-                            <Button>CHECKOUT NOW</Button>
+                            <Button onClick={createOrder}>CHECKOUT NOW</Button>
                         </Summary>
                 }
             </Bottom>
