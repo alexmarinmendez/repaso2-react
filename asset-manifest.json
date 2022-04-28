@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/repaso2-react/static/js/main.6204d0e2.chunk.js",
-    "main.js.map": "/repaso2-react/static/js/main.6204d0e2.chunk.js.map",
+    "main.js": "/repaso2-react/static/js/main.0e4d6649.chunk.js",
+    "main.js.map": "/repaso2-react/static/js/main.0e4d6649.chunk.js.map",
     "runtime-main.js": "/repaso2-react/static/js/runtime-main.97f022b8.js",
     "runtime-main.js.map": "/repaso2-react/static/js/runtime-main.97f022b8.js.map",
     "static/js/2.e9b13d38.chunk.js": "/repaso2-react/static/js/2.e9b13d38.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.97f022b8.js",
     "static/js/2.e9b13d38.chunk.js",
-    "static/js/main.6204d0e2.chunk.js"
+    "static/js/main.0e4d6649.chunk.js"
   ]
 }
